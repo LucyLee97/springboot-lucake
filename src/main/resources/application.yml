@@ -1,0 +1,32 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?serverTimezone=GMT%2b8&useSSL=false
+    username: postgres
+    password: qaz
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  cache:
+    type: redis
+    redis:
+      key-prefix: "LUCAKE:CACHE:"
+      time-to-live: 3600s
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+server:
+  servlet:
+    context-path: /lucake
+
+springdoc:
+  api-docs:
+    path: /api-docs
+
