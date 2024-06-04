@@ -1,5 +1,7 @@
 package com.example.lucake.commen.exception;
 
+import org.springframework.http.HttpStatus;
+
 public class LucakeException extends RuntimeException{
 
     private ApiStatusCodeEnum statusCodeEnum;
@@ -8,6 +10,11 @@ public class LucakeException extends RuntimeException{
 
     public LucakeException(ApiStatusCodeEnum statusCodeEnum) {
         super(String.format("(%s)%s", statusCodeEnum.getCode(), statusCodeEnum.getDesc()));
+        this.statusCodeEnum = statusCodeEnum;
+    }
+
+    public LucakeException(ApiStatusCodeEnum statusCodeEnum, String msg) {
+        super(String.format("(%s)%s", statusCodeEnum.getCode(), msg));
         this.statusCodeEnum = statusCodeEnum;
     }
 

@@ -5,8 +5,7 @@ import lombok.Data;
 
 @Data
 public class ProductDto {
-
-    @NotBlank
+    
     private Long id;
 
     @NotBlank

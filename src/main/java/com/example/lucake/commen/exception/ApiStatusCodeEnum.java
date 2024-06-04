@@ -4,9 +4,9 @@ public enum ApiStatusCodeEnum {
 
     SUCCESS("000000", "成功"),
     RESULT_NOT_FOUND("000001", "查無資料"),
-    AAAAA2("000002", "查無資料"),
+    USER_AUTH_FAIL("000002", "身份驗證失敗"),
     INPUT_ERROR("999998", "輸入錯誤"),
-    UNKNOWN_ERROR("999999", "Server 錯誤")
+    UNKNOWN_ERROR("999999", "Server 錯誤"),
     ;
 
     private final String code;

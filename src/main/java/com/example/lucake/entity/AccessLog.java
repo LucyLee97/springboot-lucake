@@ -29,7 +29,7 @@ public class AccessLog {
     @Column(name = "statusCode")
     private String statusCode;
 
-    @Column(name = "detail")
+    @Column(name = "detail", length = 4096)
     private String detail;
 
     @Column(name = "clientIp")
